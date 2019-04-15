@@ -1,0 +1,22 @@
+---
+- hosts: all
+  remote_user: root
+  become: yes
+  become_user: root
+ 
+  tasks: 
+    - name: clean up all
+      yum: 
+        name: "{{ item }}"
+        state: absent 
+      with_items:
+        - httpd
+        - vsftpd
+    - name: remove files
+      file:
+        path: "{{ item }}"
+        state: absent
+      with_items:
+        - /var/www/html/index.html
+        - /var/ftp/pub/README
+        - /etc/motd  
