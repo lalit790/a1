@@ -1,0 +1,15 @@
+---
+- hosts: all
+  remote_user: root
+  become: yes
+  become_user: root
+ 
+  tasks: 
+    - name: manage user and group memebership
+      user:
+        name: "{{ item }}"
+        state: present
+        groups: wheel
+      with_items:
+        - testuser1
+        - testuser2
