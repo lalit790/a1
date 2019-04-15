@@ -1,0 +1,8 @@
+- 
+  name: "this is our lineinfile play"
+  hosts: webserver
+  tasks:
+    - 
+      name: "Create adummy file on webserver"
+      #command: cat /tmp/test.txt
+      lineinfile: path=/tmp/test.txt line="lalit"

@@ -1,0 +1,15 @@
+---
+- hosts: all
+  remote_user: root
+  become: yes
+  become_user: root
+  gather_facts: yes 
+  tasks: 
+    - name: Install yum packages with_items
+      yum: 
+        name: "{{ item }}"
+        state: latest
+      with_items:
+        - git
+        - sshpass
+        - openssl-devel

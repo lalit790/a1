@@ -1,0 +1,11 @@
+-
+  name: "This is our module play"
+  hosts: webserver
+  gather_facts: no
+  become_user: yes
+  tasks:
+    -
+      name: " Example command for creating a group in this ansible module"
+      
+      vars:
+        common_path:  

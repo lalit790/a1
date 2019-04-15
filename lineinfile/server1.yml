@@ -1,0 +1,9 @@
+-
+  name: "this is our first service playbook"
+  hosts: webserver
+  tasks:
+    - 
+      name: "start and stop the service"
+      service:
+        name: httpd
+        state: started

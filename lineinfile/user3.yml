@@ -1,0 +1,7 @@
+- 
+  name: "This is user module ansible script"
+  hosts: webserver
+  tasks:
+    - 
+      name: "create dumy file on webserver"
+      user: name="testuser" state=absent remove=yes 

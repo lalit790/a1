@@ -1,0 +1,11 @@
+-
+  name: "This is our module play"
+  hosts: 127.0.0.1
+  gather_facts: no
+  become_user: yes
+  tasks:
+    -
+      name: " Compress directory /path/to/foo/ into /path/to/foo.tgz "
+      assemble:
+        src: /etc/ansible/fragments1
+        dest: /etc/ansible/someapp.conf 

@@ -1,0 +1,16 @@
+---
+- hosts: webserver
+  remote_user: root
+
+  vars:
+    test: "camelot"
+
+  vars_prompt:
+    - name: "name"
+      prompt: "What is your name?"
+    - name: "quest"
+      prompt: "What is your quest?"
+    - name: "favcolor"
+      prompt: "What is your fav color?"
+
+

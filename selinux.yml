@@ -1,0 +1,9 @@
+-
+  name: "This is our selinux  module play"
+  hosts: 127.0.0.1
+  tasks:
+    -
+      name: "Put SELinux in permissive mode, logging actions that would be blocked."
+      selinux: 
+        state: disabled 
+

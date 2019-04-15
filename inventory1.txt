@@ -1,0 +1,18 @@
+webserver1 ansible_host=192.168.1.40 ansible_ssh_pass=password ansible_connection=ssh ansible_port=22 ansible_user=root
+webserver2 ansible_host=192.168.1.4 ansible_ssh_pass=password ansible_connection=ssh ansible_port=22 ansible_user=lalitvohra
+nfs1 ansible_host=192.168.1.40 ansible_ssh_pass=password ansible_connection=ssh ansible_port=22 ansible_user=lalitvohra
+
+
+[webservers]
+webserver1
+webserver2
+
+[nfsservers]
+nfs1
+
+[webp]
+webserver[1:2]
+
+[web-nfs:children]
+webservers
+nfsservers

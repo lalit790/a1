@@ -1,0 +1,21 @@
+-
+  name: this is our first play
+  hosts: webserver
+  tasks:
+    - 
+      name: "Create adumy file on webserver1"
+      command: mkdir /tmp/ansible_dumy_12
+    -   
+      name: "Create adumy file on webserver1"
+      command: touch /tmp/ansible_dumy_1/dumy_file1.txt
+
+- 
+  name: THis is out second play
+  hosts: webserver
+  tasks:
+    - 
+      name: "Creating directory in tm directory"
+      command: mkdir /tmp/mysecondplaydir
+    -
+       name: "Creating my dumy file in webwserver"
+       command: touch /tmp/mysecondplaydir/seconddmmyfie.txt 

@@ -1,0 +1,17 @@
+---
+- hosts: all
+  remote_user: root
+  become: yes
+  become_user: root
+ 
+  tasks: 
+    - name: Install yum packages with_items
+      yum: 
+        name: "{{ (item is mapping)|ternary(item.name, item) }}"
+        state: latest
+      with_items:
+        - wget
+        - docker
+        - postfix
+        - net-tools
+        - samba

@@ -1,0 +1,16 @@
+---
+- hosts: webserver
+  remote_user: root
+  tasks:
+    - name: "sleep for 10 seconds"
+      wait_for: timeout=10
+      delegate_to: localhost
+ 
+    - assemble:
+        src_files:
+          - /var/config/ny-sw01/route
+          - /var/config/ny-sw01/aaa
+        dest: /var/finalconfig/ny-sw01/run.cfg
+
+
+

@@ -1,0 +1,8 @@
+---
+- name: httpd and vsftpd are runing
+  yum:
+    name: "{{ item }}""
+  with_items:
+    - httpd
+    - vsftpd
+    - git

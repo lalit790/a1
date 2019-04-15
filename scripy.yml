@@ -1,0 +1,12 @@
+-
+  name: "This is our module play"
+  hosts: webserver
+  gather_facts: no
+  become_user: yes
+  tasks:
+    -
+      name: " Example command for creating a group in this ansible module"
+      script: /etc/ansible/scripttest.sh
+      args:
+        creates: /root/test123
+   

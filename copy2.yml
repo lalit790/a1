@@ -1,0 +1,11 @@
+-
+  name: "This is our first play"
+  hosts: webserver
+  tasks:
+  - name: "copy a dummy File on webserver"
+    copy: 
+      src: /etc/resolv.conf 
+      dest: /tmp 
+      owner: test 
+      group: test 
+      mode: 0644

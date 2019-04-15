@@ -1,0 +1,9 @@
+---
+- hosts: webserver
+  remote_user: root
+  tasks:
+    - name: "sleep for 10 seconds"
+      wait_for: timeout=10
+      delegate_to: localhost
+
+

@@ -1,0 +1,16 @@
+-
+  name: "This is our module play"
+  hosts: 127.0.0.1
+  tasks:
+    -
+      name: "Add the user 'exampleuser' with a specific uid and a primary group of 'admin'"
+      user:
+        name: testinguser
+        comment: "Ansible testing user"
+        group: lalit
+   
+    - name: "remove user"
+      user:
+        name: lalit2
+        state: absent
+        remove: yes

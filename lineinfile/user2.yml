@@ -1,0 +1,7 @@
+- 
+  name: "This is user module ansible script"
+  hosts: webserver
+  tasks:
+    - 
+      name: "create dumy file on webserver"
+      user: name="testuser1" state=present password="$6$vs17Mhjb$qNqYwXCgkI/f3lzS4CLR2.mVSFkpeHiAAyIkQ7px9FQDR3yeSG2fMMpcmzDBvql9TrZWxAg5/YMUgS.ndylBA"

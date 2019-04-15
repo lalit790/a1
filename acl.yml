@@ -1,0 +1,14 @@
+-
+  name: "This is our module play"
+  hosts: 127.0.0.1
+  gather_facts: no
+  become_user: yes
+  tasks:
+    -
+      name: " Grant user Joe read access to a file "
+      acl: 
+        path: /etc/ansible/foo.conf
+        entity: prince1
+        etype: user
+        permissions: r
+        state: present 

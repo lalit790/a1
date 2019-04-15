@@ -1,0 +1,26 @@
+---
+- hosts: webserver
+  gather_facts: False
+  become: True
+  vars_prompt:
+    - name: some_filelastname #
+      private: no
+      prompt: "Enter the user's Fiest and last name"
+    - name: some_username
+      private: no
+      prompt: "Enter the username of user"
+    - name: some_password
+      private: yes 
+      prompt: "Enter the user's password"
+      encrypt: "sha512"
+      confirm: yes
+      salt_size: 7
+
+  tasks:
+    - 
+      name: Adding the user "{{ some_filelastname }}" 
+      user:
+         name: "{{ some_username }}" 
+         comment: "{{ some_firstlastname }}"
+         shell: /bin/bash
+         password: "{{ 'some_password | password_hash('sha512') }}"

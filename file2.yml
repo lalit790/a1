@@ -1,0 +1,31 @@
+-
+  name: "This is our file module play"
+  hosts: 127.0.0.1
+  tasks:
+    -
+      name: "test2"
+      file: 
+        path: /etc/ansible/test2.txt
+        owner: lalit
+        group: lalit
+        mode: 777
+
+    - name: "test3"
+      file:
+        src: /etc/ansible/test3.txt
+        dest: /etc/ansible/test4.txt
+        owner: lalit1
+        group: lalit1
+        state: link  
+      
+
+
+
+
+
+
+
+
+
+
+###https://www.tricksofthetrades.net/2017/10/02/ansible-local-playbooks/

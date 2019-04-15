@@ -1,0 +1,15 @@
+---
+- hosts: all
+  remote_user: root
+  become: yes
+  become_user: root
+ 
+  tasks: 
+    - name: Install yum packages with_items
+      yum: 
+        name: "{{ item.name }}"
+        state: latest
+      with_items:
+        - { name: nfs}
+        - { name: squid}
+        - { name: sendmail }

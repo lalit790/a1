@@ -1,0 +1,22 @@
+-
+  name: "This is our file module play"
+  hosts: 127.0.0.1
+  tasks:
+    -
+      name: "create a directory"
+      file: 
+        path: /etc/ansible/testdir
+        state: directory
+        owner: lalit
+        group: lalit
+        mode: 777
+
+    - name: "update the file modification"
+      file:
+        path: /etc/ansible/test5.txt
+        state: file
+        mode: 0766
+        modification_time: now
+        access_time: now  
+      
+

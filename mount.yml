@@ -1,0 +1,13 @@
+-
+  name: "This is our file module play"
+  hosts: 127.0.0.1
+  tasks:
+    -
+      name: "create a directory"
+      mount:
+        path: /etc/ansible/mount1
+        src:  /etc/ansibl/testdirmount
+        fstype: iso9660
+        opts: ro
+        state: present 
+

@@ -1,0 +1,11 @@
+-
+  name: "This is our module play"
+  hosts: webserver
+  gather_facts: no
+  become_user: yes
+  tasks:
+    -
+       name: " script ansible module"
+       script: /etc/ansible/scripttest1.sh
+       args:
+         removes: /root/test1234

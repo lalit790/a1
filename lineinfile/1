@@ -1,0 +1,7 @@
+- 
+  name: "this is out dummy script play"
+  hosts: webserver
+  tasks:
+    - 
+      name: "create a dummy file in webserver"
+      script: scripttest.sh lalit

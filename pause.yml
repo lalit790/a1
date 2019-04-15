@@ -1,0 +1,10 @@
+-
+  name: "This is our first play"
+  hosts: webserver
+  tasks:
+    - pause: seconds=3
+
+    -
+      name: "Create a dummy File on webserver"
+      copy: src=/etc/test  dest=/tmp                                    
+       

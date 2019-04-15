@@ -1,0 +1,9 @@
+-
+  name: "This is our first play"
+  hosts: webserver
+  tasks:
+  - name: Ansible copy file force
+    copy:
+      src: /etc/hosts
+      dest: /tmp 
+      

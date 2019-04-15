@@ -1,0 +1,9 @@
+-
+  name: "This is our module play"
+  hosts: 127.0.0.1
+  tasks:
+    -
+      name: " Example command for creating a group in this ansible module"
+      group :
+        name: testgroup 
+        state: present

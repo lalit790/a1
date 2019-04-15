@@ -1,0 +1,7 @@
+-
+  name: this is our first play
+  hosts: webp
+  tasks:
+    - 
+      name: "Create adumy file on webserver1"
+      command: touch /tmp/ansible_dumy.txt

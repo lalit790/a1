@@ -1,0 +1,15 @@
+-
+  name: "This is our file module play"
+  hosts: 127.0.0.1
+  tasks:
+    -
+       name: "Create a dummy File on webserver"
+       file:
+         path: /etc/ansible/test1.txt
+         owner: lalit
+         group: lalit
+         mode: 07555
+   
+    - name: print out the hostname
+      command: hostname 
+###https://www.tricksofthetrades.net/2017/10/02/ansible-local-playbooks/

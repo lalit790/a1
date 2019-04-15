@@ -1,0 +1,16 @@
+---
+- hosts: webserver
+  tasks:
+    -
+       name: "Add webserver in adhocgroup"
+       add_host: 
+         name: webserver
+         group: adhoc_group1
+ 
+- hosts: adhoc_group1
+  tasks:
+    - name: Ping all in adhoc_group1
+      ping:
+
+
+
